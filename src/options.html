@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options">
+  <h1>Settings</h1>
+
+  <label>Whisper server URL
+    <input type="url" id="whisper-url" placeholder="https://your-server.example.com/transcribe">
+  </label>
+  <label>OpenAI API key
+    <input type="password" id="api-key" placeholder="sk-..." autocomplete="off">
+  </label>
+  <label>OpenAI model
+    <input type="text" id="model" placeholder="gpt-4o-mini">
+  </label>
+  <label class="inline"><input type="checkbox" id="dark-mode"> Dark mode</label>
+
+  <button id="save">Save</button>
+  <span id="saved" role="status"></span>
+  <p class="hint">Your key is stored in Chrome's synced extension storage and is only sent to api.openai.com.</p>
+
+  <script src="theme.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

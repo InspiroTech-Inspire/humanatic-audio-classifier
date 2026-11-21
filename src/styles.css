@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 300px;
+    background-color: #f0f0f0;
+}
+
+h1,
+h2 {
+    font-size: 16px;
+}
+
+#transcription-box,
+#classification-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 50px;
+    background-color: white;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* --- additions --- */
+#transcription-box, #classification-box { white-space: pre-wrap; max-height: 160px; overflow-y: auto; }
+#status { margin-top: 8px; font-size: 12px; color: #555; }
+#status.error { color: #c0392b; }
+body.options { width: auto; max-width: 420px; }
+label { display: block; margin: 10px 0; font-size: 13px; }
+label.inline { display: flex; gap: 6px; align-items: center; }
+input[type="text"], input[type="url"], input[type="password"] {
+    display: block; width: 100%; box-sizing: border-box; margin-top: 4px; padding: 6px;
+}
+.hint { font-size: 11px; color: #777; }
+body.dark { background-color: #1e1e1e; color: #eee; }
+body.dark #transcription-box, body.dark #classification-box { background-color: #2b2b2b; border-color: #444; color: #eee; }
+body.dark #status, body.dark .hint { color: #aaa; }
+body.dark input { background: #2b2b2b; color: #eee; border: 1px solid #444; }
